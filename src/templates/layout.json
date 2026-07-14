@@ -1,0 +1,468 @@
+{
+  "backs": {
+    "twoLine": {
+      "white": {
+        "image": "back-2line-white.svg",
+        "fields": [
+          {
+            "id": "company",
+            "color": "#0C1A31",
+            "weight": 600,
+            "fontSize": 7.34,
+            "sizePx": 14,
+            "align": "right",
+            "letterSpacing": 0.02,
+            "x": 64.05,
+            "y": 4.37,
+            "errW": -1.3,
+            "right": 85.07
+          },
+          {
+            "id": "companySub",
+            "color": "#0C1A31",
+            "weight": 600,
+            "fontSize": 5.78,
+            "sizePx": 11,
+            "align": "right",
+            "letterSpacing": 0.02,
+            "x": 65.62,
+            "y": 7.54,
+            "errW": -0.6,
+            "right": 84.84
+          },
+          {
+            "id": "name",
+            "color": "#0C1A31",
+            "weight": 800,
+            "fontSize": 16.81,
+            "sizePx": 32,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "errW": -0.6,
+            "baseline": 16.3
+          },
+          {
+            "id": "title",
+            "color": "#AD760B",
+            "weight": 600,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "y": 17.48,
+            "errW": -1.4
+          },
+          {
+            "id": "title2",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 6.29,
+            "sizePx": 12,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "y": 20.98,
+            "errW": -1.9
+          },
+          {
+            "id": "phone",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 27.05,
+            "errW": 0.6
+          },
+          {
+            "id": "email",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 32.42,
+            "errW": 0.9
+          },
+          {
+            "id": "address",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 37.23,
+            "errW": 0.4
+          },
+          {
+            "id": "address2",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 6.83,
+            "sizePx": 13,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 40.71,
+            "errW": 0
+          },
+          {
+            "id": "website",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.86,
+            "y": 44.83,
+            "errW": 2.2
+          }
+        ]
+      },
+      "navy": {
+        "image": "back-2line-navy.svg",
+        "fields": [
+          {
+            "id": "company",
+            "color": "#ffffff",
+            "weight": 600,
+            "fontSize": 7.34,
+            "sizePx": 14,
+            "align": "right",
+            "letterSpacing": 0.02,
+            "x": 64.05,
+            "y": 4.37,
+            "errW": -1.3,
+            "right": 85.07
+          },
+          {
+            "id": "companySub",
+            "color": "#ffffff",
+            "weight": 600,
+            "fontSize": 5.78,
+            "sizePx": 11,
+            "align": "right",
+            "letterSpacing": 0.02,
+            "x": 65.62,
+            "y": 7.54,
+            "errW": -0.6,
+            "right": 84.84
+          },
+          {
+            "id": "name",
+            "color": "#ffffff",
+            "weight": 800,
+            "fontSize": 16.81,
+            "sizePx": 32,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "errW": -0.6,
+            "baseline": 16.3
+          },
+          {
+            "id": "title",
+            "color": "#F7B82D",
+            "weight": 600,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "y": 17.48,
+            "errW": -1.4
+          },
+          {
+            "id": "title2",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 6.29,
+            "sizePx": 12,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "y": 20.98,
+            "errW": -1.9
+          },
+          {
+            "id": "phone",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 27.05,
+            "errW": 0.6
+          },
+          {
+            "id": "email",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 32.42,
+            "errW": 0.9
+          },
+          {
+            "id": "address",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 37.23,
+            "errW": 0.4
+          },
+          {
+            "id": "address2",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 6.83,
+            "sizePx": 13,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 40.71,
+            "errW": 0
+          },
+          {
+            "id": "website",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.86,
+            "y": 44.83,
+            "errW": 2.2
+          }
+        ]
+      }
+    },
+    "oneLine": {
+      "white": {
+        "image": "back-1line-white.svg",
+        "fields": [
+          {
+            "id": "company",
+            "color": "#0C1A31",
+            "weight": 600,
+            "fontSize": 7.34,
+            "sizePx": 14,
+            "align": "right",
+            "letterSpacing": 0.02,
+            "x": 64.05,
+            "y": 4.37,
+            "errW": -1.7,
+            "right": 85.07
+          },
+          {
+            "id": "companySub",
+            "color": "#0C1A31",
+            "weight": 600,
+            "fontSize": 5.78,
+            "sizePx": 11,
+            "align": "right",
+            "letterSpacing": 0.02,
+            "x": 66.26,
+            "y": 7.54,
+            "errW": -0.9,
+            "right": 84.85
+          },
+          {
+            "id": "name",
+            "color": "#0C1A31",
+            "weight": 800,
+            "fontSize": 14.71,
+            "sizePx": 28,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "errW": -0.8,
+            "baseline": 17.22
+          },
+          {
+            "id": "title",
+            "color": "#AD760B",
+            "weight": 600,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "y": 18.22,
+            "errW": -0.8
+          },
+          {
+            "id": "phone",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 25.75,
+            "errW": 0.3
+          },
+          {
+            "id": "email",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 31.12,
+            "errW": 0.5
+          },
+          {
+            "id": "address",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 7.88,
+            "sizePx": 15,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 36.78,
+            "errW": 0
+          },
+          {
+            "id": "website",
+            "color": "#0C1A31",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.86,
+            "y": 41.86,
+            "errW": 1.9
+          }
+        ]
+      },
+      "navy": {
+        "image": "back-1line-navy.svg",
+        "fields": [
+          {
+            "id": "company",
+            "color": "#ffffff",
+            "weight": 600,
+            "fontSize": 7.34,
+            "sizePx": 14,
+            "align": "right",
+            "letterSpacing": 0.02,
+            "x": 64.05,
+            "y": 4.37,
+            "errW": -1.7,
+            "right": 85.07
+          },
+          {
+            "id": "companySub",
+            "color": "#ffffff",
+            "weight": 600,
+            "fontSize": 5.78,
+            "sizePx": 11,
+            "align": "right",
+            "letterSpacing": 0.02,
+            "x": 66.26,
+            "y": 7.54,
+            "errW": -0.9,
+            "right": 84.85
+          },
+          {
+            "id": "name",
+            "color": "#ffffff",
+            "weight": 800,
+            "fontSize": 14.71,
+            "sizePx": 28,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "errW": -0.8,
+            "baseline": 17.22
+          },
+          {
+            "id": "title",
+            "color": "#F7B82D",
+            "weight": 600,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 5.93,
+            "y": 18.22,
+            "errW": -0.8
+          },
+          {
+            "id": "phone",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 25.75,
+            "errW": 0.3
+          },
+          {
+            "id": "email",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 31.12,
+            "errW": 0.5
+          },
+          {
+            "id": "address",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 7.88,
+            "sizePx": 15,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.74,
+            "y": 36.78,
+            "errW": 0
+          },
+          {
+            "id": "website",
+            "color": "#ffffff",
+            "weight": 400,
+            "fontSize": 8.39,
+            "sizePx": 16,
+            "align": "left",
+            "letterSpacing": 0.02,
+            "x": 10.86,
+            "y": 41.86,
+            "errW": 1.9
+          }
+        ]
+      }
+    }
+  }
+}

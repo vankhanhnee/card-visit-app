@@ -1,0 +1,315 @@
+/* Theme sang: nen be am, the trang bo tron lon, do bong mem, accent xanh duong. */
+:root {
+  --bg: #f1f0ec; /* nen be am */
+  --bg-2: #ffffff; /* mat the */
+  --bg-3: #f7f6f3; /* o nhap / vung chim */
+  --line: #e6e4de;
+  --line-2: #d8d5cd;
+  --text: #1c1c1a;
+  --muted: #98968f;
+  --accent: #2563eb;
+  --accent-2: #1d4ed8;
+  --accent-soft: #eff4ff;
+  --ok: #16a34a;
+  --warn: #d97706;
+  --danger: #dc2626;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 1px 2px rgba(28, 28, 26, 0.04), 0 8px 24px rgba(28, 28, 26, 0.06);
+  --shadow-sm: 0 1px 2px rgba(28, 28, 26, 0.05), 0 2px 8px rgba(28, 28, 26, 0.04);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, 'Segoe UI', Inter, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.boot { display: grid; place-items: center; height: 100vh; color: var(--muted); }
+
+.app { display: flex; flex-direction: column; height: 100vh; }
+
+/* ---------- Topbar ---------- */
+.topbar {
+  display: flex; align-items: center; gap: 24px;
+  padding: 14px 22px;
+  background: transparent;
+  flex-shrink: 0;
+}
+.brand {
+  display: flex; align-items: center; gap: 12px; min-width: 240px;
+  background: var(--bg-2);
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.logo {
+  width: 32px; height: 32px; border-radius: 9px;
+  background: linear-gradient(135deg, var(--accent), #60a5fa);
+}
+.brand h1 { margin: 0; font-size: 14px; font-weight: 700; letter-spacing: -0.01em; }
+.brand p { margin: 2px 0 0; font-size: 11px; color: var(--muted); }
+
+.tabs { display: flex; gap: 4px; }
+.tab {
+  padding: 9px 18px; border: 0; border-radius: 999px;
+  background: transparent; color: var(--muted);
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.tab:hover { background: rgba(28,28,26,.05); color: var(--text); }
+.tab.active { background: var(--accent); color: #fff; box-shadow: var(--shadow-sm); }
+
+.stats { margin-left: auto; display: flex; gap: 16px; font-size: 12px; color: var(--muted); font-weight: 500; }
+.stats .ok { color: var(--ok); }
+.stats .warn { color: var(--warn); }
+
+main { flex: 1; overflow: hidden; }
+
+/* ---------- Panels ---------- */
+.panel { height: 100%; overflow: auto; padding: 8px 22px 22px; }
+.panel-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.panel-head h2 { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+.actions { display: flex; gap: 8px; align-items: center; }
+
+.preview-panel, .export-panel {
+  display: grid; grid-template-columns: 1fr 360px;
+  gap: 18px; padding: 8px 22px 22px;
+}
+
+/* Xem truoc: hai mat card canh nhau, mac dinh zoom vua khung */
+/* Khong dat place-items o day: no reset align-items ve stretch, figure se cao
+ * bang ca khung va caption bi day xuong tan day. */
+.canvas-stage.both-sides {
+  display: flex; flex-direction: row; align-items: center; justify-content: center;
+  gap: 24px; flex-wrap: wrap;
+}
+.both-sides figure { margin: 0; display: grid; justify-items: center; gap: 10px; }
+.both-sides figcaption { font-size: 11px; color: var(--muted); font-weight: 500; }
+.pick-sub.warn { color: var(--warn); }
+
+.export-left {
+  background: var(--bg-2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 20px 22px;
+  overflow: auto;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  padding: 9px 16px; border-radius: 10px; border: 1px solid var(--line-2);
+  background: var(--bg-2); color: var(--text);
+  font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: background .15s, border-color .15s, box-shadow .15s;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent); }
+.btn.primary {
+  background: var(--accent); border-color: var(--accent); color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.btn.primary:hover { background: var(--accent-2); border-color: var(--accent-2); color: #fff; }
+.btn.ghost { background: transparent; border-color: var(--line-2); }
+.btn.danger, .link.danger { color: var(--danger); }
+.btn.danger:hover { border-color: var(--danger); color: var(--danger); }
+.btn.full { width: 100%; }
+.btn.big { padding: 14px; font-size: 14px; border-radius: 12px; }
+.btn:disabled { opacity: .4; cursor: not-allowed; box-shadow: none; }
+.btn:disabled:hover { border-color: var(--line-2); color: var(--text); }
+
+.link {
+  background: none; border: 0; color: var(--accent);
+  cursor: pointer; font-size: 12px; padding: 2px 4px; font-weight: 600;
+}
+.link:hover { text-decoration: underline; }
+
+.chip {
+  padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line-2);
+  background: var(--bg-2); color: var(--muted); font-size: 12px; cursor: pointer;
+}
+.chip.on { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+.seg { display: flex; background: var(--bg-3); border-radius: 999px; padding: 3px; border: 1px solid var(--line); }
+.seg button {
+  border: 0; background: transparent; color: var(--muted);
+  padding: 7px 16px; border-radius: 999px; font-size: 12px; font-weight: 600; cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.seg button:hover { color: var(--text); }
+.seg button.on { background: var(--accent); color: #fff; box-shadow: var(--shadow-sm); }
+
+/* ---------- Table ---------- */
+.table-wrap {
+  background: var(--bg-2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+table { width: 100%; border-collapse: collapse; }
+th {
+  text-align: left; padding: 12px 14px; font-size: 10px;
+  text-transform: uppercase; letter-spacing: .08em;
+  color: var(--muted); background: var(--bg-3); font-weight: 700;
+}
+td { padding: 12px 14px; border-top: 1px solid var(--line); font-size: 13px; }
+tr:hover td { background: var(--bg-3); }
+td.idx { color: var(--muted); width: 40px; }
+td.strong { font-weight: 650; }
+.row-actions { text-align: right; white-space: nowrap; }
+
+.empty-state {
+  text-align: center; padding: 80px 20px;
+  background: var(--bg-2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.empty-state p { margin: 6px 0; font-weight: 600; }
+.empty-state p.muted { font-weight: 400; }
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+
+/* ---------- Alerts ---------- */
+.alert { padding: 11px 13px; border-radius: 10px; font-size: 12px; margin: 10px 0; font-weight: 500; }
+.alert.error { background: #fef2f2; color: var(--danger); }
+.alert.warn { background: #fffbeb; color: var(--warn); }
+.alert.ok { background: #f0fdf4; color: var(--ok); display: flex; gap: 8px; align-items: center; }
+
+/* ---------- Modal ---------- */
+.modal-backdrop {
+  position: fixed; inset: 0; background: rgba(28,28,26,.35);
+  display: grid; place-items: center; z-index: 50;
+  backdrop-filter: blur(2px);
+}
+.modal {
+  background: var(--bg-2);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(28,28,26,.18);
+  padding: 24px; width: 540px;
+  max-height: 86vh; overflow: auto;
+}
+.modal.wide { width: 680px; }
+.modal h3 { margin: 0 0 6px; font-size: 17px; font-weight: 700; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 22px; }
+
+.form-grid, .map-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 18px; }
+.map-grid { grid-template-columns: 1fr; gap: 8px; }
+.map-row { display: grid; grid-template-columns: 200px 1fr; align-items: center; gap: 10px; font-size: 13px; }
+
+label.stack, .form-grid label { display: flex; flex-direction: column; gap: 6px; }
+label span, .stack > span { font-size: 11px; color: var(--muted); font-weight: 600; }
+
+input, select, textarea {
+  background: var(--bg-3); border: 1px solid var(--line); color: var(--text);
+  border-radius: 10px; padding: 9px 11px; font-size: 13px;
+  font-family: inherit; width: 100%;
+  transition: border-color .15s, background .15s;
+}
+input::placeholder, textarea::placeholder { color: var(--muted); }
+input:focus, select:focus, textarea:focus {
+  outline: none; border-color: var(--accent); background: var(--bg-2);
+}
+input[type='color'] { padding: 2px; height: 36px; cursor: pointer; }
+input[type='checkbox'] { width: auto; accent-color: var(--accent); }
+input[type='range'] { width: 100px; padding: 0; background: transparent; border: 0; accent-color: var(--accent); }
+
+.check { display: flex; flex-direction: row; align-items: center; gap: 6px; font-size: 12px; color: var(--text); }
+
+/* ---------- Canvas ---------- */
+.canvas-col {
+  display: flex; flex-direction: column;
+  background: var(--bg-2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+  overflow: auto;
+}
+.canvas-toolbar { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.canvas-toolbar select { width: auto; min-width: 180px; }
+.zoom {
+  flex-direction: row; align-items: center; gap: 6px; display: flex;
+  margin-left: auto; font-size: 12px; color: var(--muted); font-weight: 500;
+}
+.btn.icon {
+  width: 30px; height: 30px; padding: 0;
+  display: grid; place-items: center; font-size: 16px; line-height: 1;
+}
+.zoom-val { min-width: 44px; text-align: center; font-variant-numeric: tabular-nums; }
+
+.canvas-stage {
+  flex: 1; display: grid; place-items: center;
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 40px;
+  min-height: 340px;
+  overflow: auto;
+}
+.canvas-wrap { display: grid; place-items: center; }
+.card-canvas {
+  position: relative;
+  transform-origin: center;
+  box-shadow: 0 4px 12px rgba(28,28,26,.10), 0 18px 50px rgba(28,28,26,.14);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.card-art { position: absolute; inset: 0; }
+.card-art img { display: block; }
+
+.hint { color: var(--muted); font-size: 11px; text-align: center; margin-top: 12px; }
+kbd {
+  background: var(--bg-3); border: 1px solid var(--line-2);
+  border-radius: 5px; padding: 1px 5px; font-size: 10px;
+}
+
+/* ---------- Inspector ---------- */
+.inspector {
+  background: var(--bg-2);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  overflow: auto;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.inspector section { display: flex; flex-direction: column; gap: 10px; }
+.inspector h3 {
+  margin: 0; font-size: 10px; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--muted); font-weight: 700;
+}
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.row { display: flex; gap: 8px; align-items: center; }
+.row.wrap { flex-wrap: wrap; }
+
+.field-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.field-list li {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 10px; border-radius: 8px; font-size: 12px;
+}
+.field-list li.plain { cursor: default; }
+/* Nhan khong duoc co lai: dia chi dai se nuot mat ten truong. Cat gia tri thay vi
+ * cat nhan. */
+.field-list .flabel { flex: 0 0 auto; white-space: nowrap; font-weight: 500; }
+.field-list .pick-sub {
+  flex: 1; min-width: 0; text-align: right;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+/* ---------- Export ---------- */
+.pick-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.pick-list li { border: 1px solid var(--line); border-radius: 12px; background: var(--bg-3); }
+.pick-list li.on { border-color: var(--accent); background: var(--accent-soft); }
+.pick-list label { display: flex; align-items: center; gap: 10px; padding: 11px 14px; cursor: pointer; flex-direction: row; }
+.pick-name { font-weight: 600; font-size: 13px; }
+.pick-sub { color: var(--muted); font-size: 12px; margin-left: auto; }
+
+.mini-preview {
+  background: var(--bg-3); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 12px;
+  display: grid; place-items: center; overflow: hidden;
+  min-height: 100px;
+}
