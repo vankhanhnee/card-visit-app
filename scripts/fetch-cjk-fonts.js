@@ -8,6 +8,7 @@
  * Chay: node scripts/fetch-cjk-fonts.js
  */
 const fs = require('node:fs/promises');
+const fsSync = require('node:fs');
 const path = require('node:path');
 
 const OUT = path.join(__dirname, '..', 'src', 'templates', 'fonts', 'cjk.css');
@@ -30,15 +31,28 @@ const { execFile } = require('node:child_process');
 const { promisify } = require('node:util');
 const run = promisify(execFile);
 
+/* Uu tien fetch cua Node (co san tren moi may CI, vd Vercel). Mot so may local
+ * khong phan giai duoc DNS trong Node nhung curl thi duoc => co duong lui. */
 const get = async (url, asBuffer = false) => {
-  const { stdout } = await run('curl', ['-sSfL', '-A', UA, url], {
-    encoding: asBuffer ? 'buffer' : 'utf8',
-    maxBuffer: 64 * 1024 * 1024,
-  });
-  return stdout;
+  try {
+    const res = await fetch(url, { headers: { 'User-Agent': UA } });
+    if (!res.ok) throw new Error(`${res.status} ${url}`);
+    return asBuffer ? Buffer.from(await res.arrayBuffer()) : res.text();
+  } catch {
+    const { stdout } = await run('curl', ['-sSfL', '-A', UA, url], {
+      encoding: asBuffer ? 'buffer' : 'utf8',
+      maxBuffer: 64 * 1024 * 1024,
+    });
+    return stdout;
+  }
 };
 
 (async () => {
+  if (process.argv.includes('--if-missing') && fsSync.existsSync(OUT)) {
+    console.log('cjk.css da co, bo qua tai font.');
+    return;
+  }
+
   let out = '/* Sinh boi scripts/fetch-cjk-fonts.js — dung sua tay. */\n';
   let files = 0;
   let bytes = 0;

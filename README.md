@@ -26,6 +26,15 @@ npm run dist:mac    # -> release/*.dmg
 npm run build:web   # -> dist/  (deploy lên bất kỳ static host nào)
 ```
 
+### Deploy Vercel
+
+Import repo vào Vercel là chạy — `vercel.json` đã khai báo sẵn mọi thứ:
+
+- Build command `npm run vercel-build` = tải font (nếu chưa có) rồi `vite build`.
+  `cjk.css` (38MB) được gitignore nên **phải tải lúc build**, không có sẵn trong repo.
+- `ELECTRON_SKIP_BINARY_DOWNLOAD=1` — Electron là devDependency, không cần tải binary 100MB trên CI.
+- Output: `dist/`.
+
 ## Quy trình 3 bước
 
 1. **Nhân viên** — import Excel/CSV (app tự đoán cột) hoặc nhập tay.

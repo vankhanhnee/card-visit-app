@@ -16,7 +16,9 @@
     "build:web": "vite build",
     "preview:web": "vite preview",
     "fonts": "node scripts/fetch-cjk-fonts.js",
-    "icon": "electron scripts/make-icon.js"
+    "icon": "electron scripts/make-icon.js",
+    "fonts:ensure": "node scripts/fetch-cjk-fonts.js --if-missing",
+    "vercel-build": "npm run fonts:ensure && vite build"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
